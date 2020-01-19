@@ -17,26 +17,26 @@ This project gives a simple overview of how HTTP requests to a simple Jetty base
 ### Starting prometheus
 
 Assuming prometheus is already installed in the system, start it using the below command:
- `prometheus.exe --config.file prometheus_jetty.yml`
+`prometheus.exe --config.file prometheus_jetty.yml`
 
-where below is the content of the prometheus_jetty.yml file:
-------------------------------------------------------------------------------------------------------------
-global:
-  scrape_interval:     5s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
-  evaluation_interval: 5s # Evaluate rules every 15 seconds. The default is every 1 minute.
-  
-alerting:
-  alertmanagers:
-  - static_configs:
-    - targets:
+Content of the yml file is as below:
+```
+     global:
+       scrape_interval:     5s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
+       evaluation_interval: 5s # Evaluate rules every 15 seconds. The default is every 1 minute.
 
-rule_files:
+     alerting:
+       alertmanagers:
+       - static_configs:
+         - targets:
 
-scrape_configs:
-  - job_name: 'prometheus'
-    static_configs:
-    - targets: ['localhost:8082']
-------------------------------------------------------------------------------------------------------------
+     rule_files:
+
+     scrape_configs:
+       - job_name: 'prometheus'
+         static_configs:
+         - targets: ['localhost:8082']
+```
 
 ### Running program
 
