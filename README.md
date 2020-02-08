@@ -1,6 +1,6 @@
 # Jetty server monitoring (using Prometheus) 
 
-This is a very simple which gives an  overview of how HTTP requests to a simple Jetty based web server can be monitored using Prometheus. This project will be enhanced shortly with below features:
+This is a very simple project which gives an  overview of how HTTP requests to a simple Jetty based web server can be monitored using Prometheus. This project will be enhanced shortly with below features:
 * Adding Grafana dashboards
 * Load testing different REST endpoints using Gatling 
 
